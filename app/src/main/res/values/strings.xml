@@ -13,10 +13,12 @@
 
     <string name="home_second">Home Second</string>
 
-    <!-- TOOLBAR STRINGS -->
     <string name="toolbarIcon_search">Search</string>
     <string name="toolbarIcon_profile">Profile</string>
     <string name="toolbarIcon_settings">Settings</string>
-    <string name="fragmentHome_category_createdGames">Created games</string>
+
+    <string name="fragmentHome_category_createdGames">Created</string>
+    <string name="fragmentHome_category_favoriteGames">Favorite</string>
+    <string name="fragmentHome_category_top10Games">Top 10</string>
 
 </resources>

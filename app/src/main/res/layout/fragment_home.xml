@@ -8,10 +8,31 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/textView_fragment_home_createdGames"
+        android:id="@+id/textView_fragmentHome_createdGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fragmentHome_category_createdGames"
+        android:textSize="@dimen/page_title"
+        android:textColor="@color/textDark"/>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_fragmentHome_createdGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView_fragmentHome_favoriteGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragmentHome_category_favoriteGames"
+        android:textSize="@dimen/page_title"
+        android:textColor="@color/textDark"/>
+
+    <TextView
+        android:id="@+id/textView_fragmentHome_top10Games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragmentHome_category_top10Games"
         android:textSize="@dimen/page_title"
         android:textColor="@color/textDark"/>
 
