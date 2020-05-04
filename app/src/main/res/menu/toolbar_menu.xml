@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_icon_toolbar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        android:title="@string/toolbarIcon_search" />
+
+    <item
+        android:id="@+id/profile_icon_toolbar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/toolbarIcon_profile"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/settings_icon_toolbar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/toolbarIcon_settings"
+        app:showAsAction="always"/>
+</menu>

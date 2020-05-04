@@ -12,4 +12,10 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+
+    <!-- TOOLBAR STRINGS -->
+    <string name="toolbarIcon_search">Search</string>
+    <string name="toolbarIcon_profile">Profile</string>
+    <string name="toolbarIcon_settings">Settings</string>
+
 </resources>
