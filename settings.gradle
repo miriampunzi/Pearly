@@ -1,0 +1,2 @@
+rootProject.name='Pearly'
+include ':app'
