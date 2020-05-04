@@ -5,4 +5,12 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="colorIconToolbar">#FFFFFF</color>
+
+    <color name="iconLight">#FFFFFF</color>
+    <color name="iconMedium">#707070</color>
+    <color name="iconDark">#212121</color>
+
+    <color name="textLight">#FFFFFF</color>
+    <color name="textMedium">#444444</color>
+    <color name="textDark">#1b1b1b</color>
 </resources>
