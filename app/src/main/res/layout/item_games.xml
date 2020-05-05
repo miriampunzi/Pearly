@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView_item_games_gameImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150sp"
+        android:layout_height="250sp"
+        android:layout_marginTop="16dp"
         android:contentDescription="UNO"
         android:src="@drawable/game_uno"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,13 +18,15 @@
 
     <TextView
         android:id="@+id/textView_item_games_gameTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UNO"
-        android:paddingTop="16dp"
         android:gravity="center"
+        android:paddingTop="16dp"
+        android:text="UNO"
         android:textColor="@color/textDark"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_item_games_gameImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

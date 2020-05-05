@@ -3,11 +3,11 @@ package es.upm.progui.pearly;
 public class Game {
 
     private String name;
-    private String imageName;
+    private int imageIdResource;
 
-    public Game(String name, String imageName) {
+    public Game(String name, int imageIdResource) {
         this.name = name;
-        this.imageName = imageName;
+        this.imageIdResource = imageIdResource;
     }
 
     public String getName() {
@@ -18,11 +18,11 @@ public class Game {
         this.name = name;
     }
 
-    public String getImageName() {
-        return imageName;
+    public int getImageIdResource() {
+        return imageIdResource;
     }
 
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
+    public void setImageIdResource(int imageIdResource) {
+        this.imageIdResource = imageIdResource;
     }
 }
