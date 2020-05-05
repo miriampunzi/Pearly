@@ -52,6 +52,22 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager top10GamesLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         top10GamesList.setLayoutManager(top10GamesLayoutManager);
 
+        // classic games list
+        RecyclerView classicGamesList = root.findViewById(R.id.recyclerView_fragmentHome_classicGames);
+        classicGamesList.setHasFixedSize(true);
+        ListGamesAdapter classicGamesAdapter = new ListGamesAdapter(Database.GAME_CLASSIC);
+        classicGamesList.setAdapter(classicGamesAdapter);
+        LinearLayoutManager classicGamesLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        classicGamesList.setLayoutManager(classicGamesLayoutManager);
+
+        // solitary games list
+        RecyclerView solitaryGamesList = root.findViewById(R.id.recyclerView_fragmentHome_solitaryGames);
+        solitaryGamesList.setHasFixedSize(true);
+        ListGamesAdapter solitaryGamesAdapter = new ListGamesAdapter(Database.GAMES_SOLITARY);
+        solitaryGamesList.setAdapter(solitaryGamesAdapter);
+        LinearLayoutManager solitaryGamesLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        solitaryGamesList.setLayoutManager(solitaryGamesLayoutManager);
+
         return root;
     }
 }

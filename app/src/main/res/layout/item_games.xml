@@ -8,10 +8,9 @@
     <ImageView
         android:id="@+id/imageView_item_games_gameImage"
         android:layout_width="150sp"
-        android:layout_height="250sp"
-        android:layout_marginTop="16dp"
+        android:layout_height="150sp"
         android:contentDescription="UNO"
-        android:src="@drawable/game_uno"
+        android:src="@drawable/uno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

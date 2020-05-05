@@ -20,5 +20,7 @@
     <string name="fragmentHome_category_createdGames">Created</string>
     <string name="fragmentHome_category_favoriteGames">Favorite</string>
     <string name="fragmentHome_category_top10Games">Top 10</string>
+    <string name="fragmentHome_category_classicGames">Classic</string>
+    <string name="fragmentHome_category_solitaryGames">Solitary</string>
 
 </resources>
