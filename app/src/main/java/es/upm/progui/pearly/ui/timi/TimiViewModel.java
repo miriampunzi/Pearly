@@ -1,16 +1,16 @@
-package es.upm.progui.pearly.ui.slideshow;
+package es.upm.progui.pearly.ui.timi;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class TimiViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public TimiViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is timi fragment");
     }
 
     public LiveData<String> getText() {

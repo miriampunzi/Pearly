@@ -1,16 +1,16 @@
-package es.upm.progui.pearly.ui.gallery;
+package es.upm.progui.pearly.ui.alejandro;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class AlejandroViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public AlejandroViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is alejandro fragment");
     }
 
     public LiveData<String> getText() {

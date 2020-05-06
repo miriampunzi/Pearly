@@ -33,5 +33,25 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
             android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/alejandro"
+            android:icon="@drawable/ic_settings"
+            android:title="ALEJANDRO" />
+
+        <item
+            android:id="@+id/timi"
+            android:icon="@drawable/ic_settings"
+            android:title="TIMI" />
+
+        <item
+            android:id="@+id/themis"
+            android:icon="@drawable/ic_settings"
+            android:title="THEMIS" />
+
+        <item
+            android:id="@+id/miriam"
+            android:icon="@drawable/ic_settings"
+            android:title="MIRIAM" />
     </group>
 </menu>
