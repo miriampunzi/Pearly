@@ -10,26 +10,26 @@ public class Database {
 
     public static Game[] GAMES_FAVORITES = new Game[] {
         new Game("UNO", R.drawable.uno),
-        new Game("Cards Against Humanity", R.drawable.cah),
         new Game("D&D", R.drawable.d_and_d),
         new Game("Bisca", R.drawable.bisca),
         new Game("Catan", R.drawable.catan),
         new Game("Exploding kittens", R.drawable.exploding_kittens),
         new Game("Scala 40", R.drawable.scala40),
         new Game("Briscola", R.drawable.briscola),
+        new Game("Cards Against Humanity", R.drawable.cah),
     };
 
     public static Game[] GAMES_TOP_10 = new Game[] {
         new Game("Risiko", R.drawable.risiko),
         new Game("Taboo", R.drawable.taboo),
         new Game("Zombicide", R.drawable.zombicide),
-        new Game("Monopoly", R.drawable.monopoly),
         new Game("Cluedo", R.drawable.cluedo),
+        new Game("Trivial Pursuit", R.drawable.trivial_pursuit),
+        new Game("Monopoly", R.drawable.monopoly),
         new Game("Briscola", R.drawable.briscola),
         new Game("UNO", R.drawable.uno),
         new Game("Cards Against Humanity", R.drawable.cah),
         new Game("D&D", R.drawable.d_and_d),
-        new Game("Trivial Pursuit", R.drawable.trivial_pursuit)
     };
 
     public static Game[] GAME_CLASSIC = new Game[] {
@@ -38,9 +38,9 @@ public class Database {
         new Game("Monopoly", R.drawable.monopoly),
         new Game("Poker", R.drawable.poker),
         new Game("Risiko", R.drawable.risiko),
+        new Game("Othello", R.drawable.othello),
         new Game("Solitarie", R.drawable.solitaire),
         new Game("UNO", R.drawable.uno),
-        new Game("Othello", R.drawable.othello),
     };
 
     public static Game[] GAMES_SOLITARY = new Game[] {
