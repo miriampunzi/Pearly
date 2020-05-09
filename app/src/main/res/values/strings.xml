@@ -27,5 +27,16 @@
     <string name="menu_create_game">Create Game</string>
     <string name="menu_join_game">Join game</string>
     <string name="menu_settings">Settings</string>
+    <string name="menu_modification_selectAll">Select all</string>
+    <string name="fragment_modification_deleteSelected_modification_show">Show:</string>
+    <string name="fragment_modification_redCards">Red cards</string>
+    <string name="fragment_modification_blueCards">Blue cards</string>
+    <string name="fragment_modification_greenCards">Green cards</string>
+    <string name="fragment_modification_yellowCards">Yellow cards</string>
+    <string name="fragment_modification_wildCards">Wild cards</string>
+    <string name="fragment_modification_deleteSelected">Delete selected</string>
+    <string name="fragment_modification_applyChanges">Apply changes</string>
+    <string name="fragment_modification_options">Options:</string>
+    <string name="fragment_modification_editSelected">Edit selected</string>
 
 </resources>

@@ -9,6 +9,7 @@
         android:id="@+id/imageView_item_card_card"
         android:layout_width="150sp"
         android:layout_height="220sp"
+        android:layout_margin="10sp"
         android:src="@drawable/uno_card_blue0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,6 +14,10 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
 
     private ArrayList<Card_UNO> cards = Database.UNO_CARDS;
 
+    public UNOCardsAdapter() {
+        cards.add(0, new Card_UNO(R.drawable.add_card, null, false, -1, null, null, null));
+    }
+
     @NonNull
     @Override
     public CardItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

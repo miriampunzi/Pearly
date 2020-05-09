@@ -27,7 +27,7 @@ public class ModificationFragment extends Fragment {
         UNOCardList.setHasFixedSize(true);
         UNOCardsAdapter adapter = new UNOCardsAdapter();
         UNOCardList.setAdapter(adapter);
-        GridLayoutManager UNOCardsLayoutManager = new GridLayoutManager(getContext(), 5);
+        GridLayoutManager UNOCardsLayoutManager = new GridLayoutManager(getContext(), 4);
         UNOCardList.setLayoutManager(UNOCardsLayoutManager);
 
         return root;
