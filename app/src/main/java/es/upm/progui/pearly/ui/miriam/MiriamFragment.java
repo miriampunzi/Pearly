@@ -17,7 +17,7 @@ public class MiriamFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         miriamViewModel = ViewModelProviders.of(this).get(MiriamViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_miriam, container, false);
+        View root = inflater.inflate(R.layout.fragment_modification, container, false);
         return root;
     }
 }

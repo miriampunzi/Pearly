@@ -29,6 +29,6 @@
 
     <fragment
         android:id="@+id/miriam"
-        android:name="es.upm.progui.pearly.ui.miriam.MiriamFragment"
-        tools:layout="@layout/fragment_alejandro" />
+        android:name="es.upm.progui.pearly.ui.modification.ModificationFragment"
+        tools:layout="@layout/fragment_modification" />
 </navigation>
