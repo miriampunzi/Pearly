@@ -38,5 +38,6 @@
     <string name="fragment_modification_applyChanges">Apply changes</string>
     <string name="fragment_modification_options">Options:</string>
     <string name="fragment_modification_editSelected">Edit selected</string>
+    <string name="fragment_modification_discard_changes">DISCARD CHANGES</string>
 
 </resources>

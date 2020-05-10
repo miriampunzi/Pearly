@@ -1,6 +1,7 @@
 package es.upm.progui.pearly.ui.modification;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ public class ModificationFragment extends Fragment {
 
         RecyclerView UNOCardList = root.findViewById(R.id.recyclerView_fragmentModification_cards);
         UNOCardList.setHasFixedSize(true);
-        UNOCardsAdapter adapter = new UNOCardsAdapter();
+        UNOCardsAdapter adapter = new UNOCardsAdapter(getActivity());
         UNOCardList.setAdapter(adapter);
         GridLayoutManager UNOCardsLayoutManager = new GridLayoutManager(getContext(), 4);
         UNOCardList.setLayoutManager(UNOCardsLayoutManager);

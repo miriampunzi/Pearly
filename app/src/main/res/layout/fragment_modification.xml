@@ -126,6 +126,11 @@
             android:layout_height="wrap_content"
             android:text="@string/fragment_modification_applyChanges" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_modification_discard_changes" />
+
     </LinearLayout>
 
 </LinearLayout>
