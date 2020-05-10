@@ -144,19 +144,36 @@
 
     </TextView>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/write_rule"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Write your rule"
-        android:gravity="top"
-        android:textColor="@android:color/white"
-        android:textSize="39sp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/text_shape"
-        android:padding="15dp"/>
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/write_rule"
+            android:layout_width="550dp"
+            android:layout_height="match_parent"
+            android:text="Write your rule"
+            android:gravity="top"
+            android:textColor="@android:color/white"
+            android:textSize="39sp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/text_shape"
+            android:padding="15dp"/>
+
+        <ImageView
+            android:id="@+id/undo_create"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:src="@drawable/undo"
+            android:clickable="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp">
+        </ImageView>
+
+    </LinearLayout>
 
 </LinearLayout>

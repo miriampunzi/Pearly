@@ -33,4 +33,9 @@
         <item>Private</item>
     </string-array>
 
+    <string-array name="select_type">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
 </resources>

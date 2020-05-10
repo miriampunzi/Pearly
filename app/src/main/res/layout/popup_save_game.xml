@@ -61,7 +61,7 @@
         android:text="Type your Game Name"
         android:textColor="@android:color/white"
         android:hint="Underline color change"
-        app:backgroundTint="@android:color/white"/>
+        android:backgroundTint="@android:color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
