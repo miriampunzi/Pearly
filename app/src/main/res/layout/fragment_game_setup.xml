@@ -1,214 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/background"
-    tools:context=".ui.timi.GameDetailFragment">
+    android:padding="50sp"
+    tools:context=".ui.timi.GameSetupFragment">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uno_mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/setup"
+        android:textColor="@color/textLight"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp
+"
+        android:textSize="@dimen/page_title"
+        android:text="@string/volume"
+        android:textColor="@color/textLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20sp"
-        android:paddingTop="30sp">
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp
+"
+        android:background="#9C99E6"
+        android:progress="@android:integer/config_longAnimTime"
+        android:progressBackgroundTint="@color/cardview_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <LinearLayout
-            android:id="@+id/gameInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/number_of_cards"
+        android:textColor="@color/textLight"
+        android:textSize="@dimen/page_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/uno_mini"
-                android:drawableEnd="@drawable/uno_mini"
-                android:drawablePadding="30dp"
-                android:padding="30sp"
-                android:text="@string/setup"
-                android:textColor="#FFFFFF"
-                android:textSize="50sp"
-                android:textStyle="bold"
-                android:paddingTop="30dp"
-                android:layout_gravity="center_horizontal"
-                android:typeface="serif" />
+    <NumberPicker
+        android:id="@+id/numberPicker_fragmentGameSetup_numberOfCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:solidColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp
+"
+        android:textSize="@dimen/page_title"
+        android:text="@string/number_of_players"
+        android:textColor="@color/textLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+    <NumberPicker
+        android:id="@+id/numberPicker_fragmentGameSetup_numberOfPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:solidColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <TextView
-                android:id="@+id/vol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/volume"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                tools:layout_below="@id/gameInfo"
-                />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/page_title"
+        android:layout_marginTop="30dp"
+        android:text="@string/invite"
+        android:textColor="@color/textLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberPicker_fragmentGameSetup_numberOfPlayers" />
 
-            <RelativeLayout
-                android:id="@+id/volBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_below="@id/vol">
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/page_title"
+        android:layout_marginTop="30dp"
+        android:text="OR"
+        android:textColor="@color/textLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-                <SeekBar
-                    android:id="@+id/seekBar"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:background="#9C99E6"
-                    android:progress="@android:integer/config_longAnimTime"
-                    android:progressBackgroundTint="@color/cardview_light_background"
-                    tools:layout_below="@id/vol" />
+    <Button
+        android:id="@+id/button5"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/iconLight"
+        android:textColor="@color/textAccent"
+        android:layout_marginTop="30dp"
+        android:text="@string/invitelist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/textAccent"
+        android:background="@color/iconLight"
+        android:text="@string/code"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-             </RelativeLayout>
-            <TextView
-                android:id="@+id/nrc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:text="@string/number_of_cards"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                tools:layout_below="@id/volBar"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textAccent"
+        android:layout_marginTop="30dp"
+        android:background="@color/iconLight"
+        android:text="@string/play_online"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-            <RelativeLayout
-                android:id="@+id/ncards"
-                android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:layout_centerHorizontal="true"
-                tools:layout_below="@id/nrc" >
-            <NumberPicker
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:gravity="center_vertical"
-                android:solidColor="@color/white"
-               />
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/nrp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="30dp"
-                android:text="@string/number_of_players"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                tools:layout_below="@id/ncards"/>
-
-            <RelativeLayout
-                android:id="@+id/n2"
-                android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:layout_centerHorizontal="true"
-                tools:layout_below="@id/nrp">
-
-                <NumberPicker
-                    android:id="@+id/npl"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:gravity="center_vertical"
-                    android:outlineAmbientShadowColor="@color/white"
-                    android:solidColor="@color/white" />
-
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/player"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="30dp"
-                android:text="@string/invite"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                tools:layout_below="@id/n2"/>
-
-            <LinearLayout
-                android:id="@+id/twobtns"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="30dp"
-                tools:layout_below="@id/player"
-                >
-
-                <Button
-                    android:id="@+id/button4"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="200dp"
-                    android:layout_height="130dp"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginEnd="25dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_weight="2"
-                    android:background="#FFFFFF"
-                    android:text="@string/invitelist"
-                    android:textColor="#673AB7"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:typeface="serif" />
-
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="200dp"
-                    android:layout_height="130dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_weight="2"
-                    android:background="#FFFFFF"
-                    android:text="@string/code"
-                    android:textColor="#673AB7"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:typeface="serif"
-                    style="?android:attr/buttonBarButtonStyle"/>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/ortxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="30dp"
-                android:text="OR"
-                android:gravity="center"
-                android:layout_marginLeft="400dp"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                tools:layout_below="@id/twobtns"/>
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="300dp"
-                android:layout_height="130dp"
-                android:background="#FFFFFF"
-                android:text="@string/play_online"
-                android:textColor="#673AB7"
-                android:textSize="30dp"
-                android:layout_marginTop="35dp"
-                android:layout_centerHorizontal="true"
-                android:textStyle="bold"
-                android:typeface="serif"
-                tools:layout_below="@id/ortxt"/>
-
-        </RelativeLayout>
-
-        </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,8 +16,6 @@ import es.upm.progui.pearly.R;
 
 public class InviteFragment extends Fragment {
 
-    private InviteViewModel mViewModel;
-
     public static InviteFragment newInstance() {
         return new InviteFragment();
     }
@@ -31,7 +29,6 @@ public class InviteFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(InviteViewModel.class);
         // TODO: Use the ViewModel
     }
 

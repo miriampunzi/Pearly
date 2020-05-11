@@ -16,8 +16,6 @@ import es.upm.progui.pearly.R;
 
 public class GameDetailFragment extends Fragment {
 
-    private GameDetailViewModel mViewModel;
-
     public static GameDetailFragment newInstance() {
         return new GameDetailFragment();
     }
@@ -31,7 +29,6 @@ public class GameDetailFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(GameDetailViewModel.class);
         // TODO: Use the ViewModel
     }
 
