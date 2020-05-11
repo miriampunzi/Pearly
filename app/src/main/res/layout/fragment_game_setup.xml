@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,26 +9,33 @@
     android:padding="50sp"
     tools:context=".ui.timi.GameSetupFragment">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/uno_mini"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uno_mini" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="UNO"
+            android:textColor="@color/textLight"
+            android:textSize="32sp" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:text="@string/setup"
+        android:layout_marginTop="30dp"
+        android:text="Setup of the game"
         android:textColor="@color/textLight"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -37,22 +44,16 @@
         android:layout_marginTop="30dp"
         android:textSize="@dimen/page_title"
         android:text="@string/volume"
-        android:textColor="@color/textLight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        android:textColor="@color/textLight" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp
-"
+        android:layout_margin="30dp"
         android:background="#9C99E6"
         android:progress="@android:integer/config_longAnimTime"
-        android:progressBackgroundTint="@color/cardview_light_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:progressBackgroundTint="@color/cardview_light_background" />
 
     <TextView
         android:id="@+id/textView10"
@@ -61,44 +62,82 @@
         android:layout_marginTop="30dp"
         android:text="@string/number_of_cards"
         android:textColor="@color/textLight"
-        android:textSize="@dimen/page_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        android:textSize="@dimen/page_title" />
 
-    <NumberPicker
-        android:id="@+id/numberPicker_fragmentGameSetup_numberOfCards"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
-        android:solidColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        android:layout_margin="30dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_remove"
+            android:tint="@color/iconLight" />
+
+        <EditText
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_edit_text"
+            android:text="3" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_plus"
+            android:tint="@color/iconLight" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp
-"
+        android:layout_marginTop="30dp"
         android:textSize="@dimen/page_title"
         android:text="@string/number_of_players"
         android:textColor="@color/textLight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-    <NumberPicker
-        android:id="@+id/numberPicker_fragmentGameSetup_numberOfPlayers"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_remove"
+            android:tint="@color/iconLight" />
+
+        <EditText
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_edit_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_plus"
+            android:tint="@color/iconLight" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accessibility module"
+        android:textColor="@color/textLight"
         android:layout_marginTop="30dp"
-        android:background="@color/white"
-        android:solidColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        android:layout_marginBottom="30dp"
+        android:textSize="@dimen/page_title"
+        android:buttonTint="@color/iconLight"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -107,54 +146,53 @@
         android:textSize="@dimen/page_title"
         android:layout_marginTop="30dp"
         android:text="@string/invite"
-        android:textColor="@color/textLight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberPicker_fragmentGameSetup_numberOfPlayers" />
+        android:textColor="@color/textLight" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/page_title"
-        android:layout_marginTop="30dp"
-        android:text="OR"
-        android:textColor="@color/textLight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        android:layout_margin="30dp"
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/button5"
-        style="?android:attr/buttonBarButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/iconLight"
-        android:textColor="@color/textAccent"
-        android:layout_marginTop="30dp"
-        android:text="@string/invitelist"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <Button
+            android:id="@+id/button5"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/iconLight"
+            android:textColor="@color/textAccent"
+            android:text="@string/invitelist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <Button
-        style="?android:attr/buttonBarButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/textAccent"
-        android:background="@color/iconLight"
-        android:text="@string/code"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/textAccent"
+            android:background="@color/iconLight"
+            android:text="@string/code" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/textAccent"
-        android:layout_marginTop="30dp"
-        android:background="@color/iconLight"
-        android:text="@string/play_online"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/page_title"
+            android:layout_marginLeft="30dp"
+            android:text="or"
+            android:textColor="@color/textLight" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/textAccent"
+            android:background="@color/iconLight"
+            android:text="@string/play_online" />
+
+    </LinearLayout>
+    ì
+
+</LinearLayout>

@@ -22,17 +22,6 @@ public class GameSetupFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_game_setup, container, false);
-
-        NumberPicker numberPickerCards = root.findViewById(R.id.numberPicker_fragmentGameSetup_numberOfCards);
-        numberPickerCards.setMinValue(0);
-        numberPickerCards.setMaxValue(10);
-        numberPickerCards.setWrapSelectorWheel(true);
-
-        NumberPicker numberPickerPlayers = root.findViewById(R.id.numberPicker_fragmentGameSetup_numberOfPlayers);
-        numberPickerPlayers.setMinValue(0);
-        numberPickerPlayers.setMaxValue(15);
-        numberPickerPlayers.setWrapSelectorWheel(true);
-
         return root;
     }
 
