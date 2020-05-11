@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.timi.GameDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20sp"
+        android:paddingTop="30sp">
+
+        <LinearLayout
+            android:id="@+id/gameInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/uno_mini"
+                android:drawableEnd="@drawable/uno_mini"
+                android:drawablePadding="30dp"
+                android:padding="30sp"
+                android:text="@string/setup"
+                android:textColor="#FFFFFF"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:paddingTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volume"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:layout_below="@id/gameInfo"
+                />
+
+            <RelativeLayout
+                android:id="@+id/volBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_below="@id/vol">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#9C99E6"
+                    android:progress="@android:integer/config_longAnimTime"
+                    android:progressBackgroundTint="@color/cardview_light_background"
+                    tools:layout_below="@id/vol" />
+
+
+             </RelativeLayout>
+            <TextView
+                android:id="@+id/nrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="@string/number_of_cards"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:layout_below="@id/volBar"/>
+
+            <RelativeLayout
+                android:id="@+id/ncards"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_centerHorizontal="true"
+                tools:layout_below="@id/nrc" >
+            <NumberPicker
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_vertical"
+                android:solidColor="@color/white"
+               />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/nrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="@string/number_of_players"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:layout_below="@id/ncards"/>
+
+            <RelativeLayout
+                android:id="@+id/n2"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_centerHorizontal="true"
+                tools:layout_below="@id/nrp">
+
+                <NumberPicker
+                    android:id="@+id/npl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center_vertical"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:solidColor="@color/white" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="@string/invite"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:layout_below="@id/n2"/>
+
+            <LinearLayout
+                android:id="@+id/twobtns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                tools:layout_below="@id/player"
+                >
+
+                <Button
+                    android:id="@+id/button4"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="2"
+                    android:background="#FFFFFF"
+                    android:text="@string/invitelist"
+                    android:textColor="#673AB7"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_weight="2"
+                    android:background="#FFFFFF"
+                    android:text="@string/code"
+                    android:textColor="#673AB7"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ortxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="OR"
+                android:gravity="center"
+                android:layout_marginLeft="400dp"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:layout_below="@id/twobtns"/>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="300dp"
+                android:layout_height="130dp"
+                android:background="#FFFFFF"
+                android:text="@string/play_online"
+                android:textColor="#673AB7"
+                android:textSize="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:typeface="serif"
+                tools:layout_below="@id/ortxt"/>
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+</FrameLayout>
