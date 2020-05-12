@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_weight="60"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_fragmentModification_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="40"
+        android:padding="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:textSize="@dimen/page_title"
+            android:layout_marginBottom="8sp"
+            android:text="@string/fragment_modification_options"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/menu_modification_selectAll"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_edit"
+            android:text="@string/fragment_modification_editSelected" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_delete"
+            android:text="@string/fragment_modification_deleteSelected" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp"
+            android:textColor="@color/textLight"
+            android:textSize="@dimen/page_title"
+            android:text="@string/fragment_modification_deleteSelected_modification_show"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/fragment_modification_redCards"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/fragment_modification_blueCards"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/fragment_modification_greenCards"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/fragment_modification_yellowCards"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textLight"
+            android:buttonTint="@color/iconLight"
+            android:text="@string/fragment_modification_wildCards"
+            android:checked="true"
+            />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_modification_applyChanges" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_modification_discard_changes" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

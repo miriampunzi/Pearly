@@ -27,15 +27,5 @@
     <string name="menu_create_game">Create Game</string>
     <string name="menu_join_game">Join game</string>
     <string name="menu_settings">Settings</string>
-    
-    <string-array name="save_type">
-        <item>Public</item>
-        <item>Private</item>
-    </string-array>
-
-    <string-array name="select_type">
-        <item>Yes</item>
-        <item>No</item>
-    </string-array>
 
 </resources>
