@@ -11,11 +11,9 @@
     tools:context=".fragments.GameDetailFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/uno_table"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:src="@drawable/uno_table" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +26,6 @@
             android:src="@drawable/uno_mini" />
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -45,6 +42,7 @@
         android:orientation="horizontal" >
 
         <Button
+            android:id="@+id/button_fragmentGameDetail_startGame"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@color/iconLight"
@@ -104,6 +102,7 @@
         android:orientation="horizontal" >
 
         <Button
+            android:id="@+id/button_fragmentGameDetail_modifyGame"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:background="@color/iconLight"

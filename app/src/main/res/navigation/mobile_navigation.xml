@@ -6,19 +6,48 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:label="Home"
+        android:label="Pearly"
         android:id="@+id/nav_home"
         android:name="es.upm.progui.pearly.fragments.HomeFragment"
         tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_gameDetail"
+            app:destination="@id/nav_gameDetail" />
     </fragment>
 
     <fragment
-        android:id="@+id/timi"
-        android:name="es.upm.progui.pearly.fragments.GameSetupFragment"
-        tools:layout="@layout/fragment_game_setup" />
+        android:id="@+id/nav_gameDetail"
+        android:label="UNO"
+        android:name="es.upm.progui.pearly.fragments.GameDetailFragment"
+        tools:layout="@layout/fragment_game_detail" >
+        <action
+            android:id="@+id/action_nav_gameDetail_to_nav_gameSetup"
+            app:destination="@id/nav_gameSetup" />
+        <action
+            android:id="@+id/action_nav_gameDetail_to_nav_gameModification"
+            app:destination="@id/nav_gameModification" />
+    </fragment>
 
     <fragment
-        android:id="@+id/miriam"
+        android:label="Game Setup"
+        android:id="@+id/nav_gameSetup"
+        android:name="es.upm.progui.pearly.fragments.GameSetupFragment"
+        tools:layout="@layout/fragment_game_setup" >
+        <action
+            android:id="@+id/action_nav_gameSetup_to_nav_inviteFriends"
+            app:destination="@id/nav_inviteFriends" />
+    </fragment>
+
+    <fragment
+        android:label="Invite friends"
+        android:id="@+id/nav_inviteFriends"
+        android:name="es.upm.progui.pearly.fragments.InviteFragment"
+        tools:layout="@layout/fragment_invite" >
+    </fragment>
+
+    <fragment
+        android:label="UNO Modification"
+        android:id="@+id/nav_gameModification"
         android:name="es.upm.progui.pearly.fragments.ModificationFragment"
         tools:layout="@layout/fragment_modification" />
 </navigation>

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import es.upm.progui.pearly.R;
 
@@ -19,15 +20,26 @@ public class GameDetailFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_game_detail, container, false);
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View gameDetailView = inflater.inflate(R.layout.fragment_game_detail, container, false);
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        // TODO: Use the ViewModel
+        Button startGameButton = gameDetailView.findViewById(R.id.button_fragmentGameDetail_startGame);
+        startGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameSetupFragment()).commit();
+            }
+        });
+
+        Button modifyGameButton = gameDetailView.findViewById(R.id.button_fragmentGameDetail_modifyGame);
+        modifyGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).commit();
+            }
+        });
+
+        return gameDetailView;
     }
 
 }
