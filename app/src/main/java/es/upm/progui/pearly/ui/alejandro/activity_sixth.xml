@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="YOUR TURN"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="774dp"
+            android:layout_height="237dp"
+            app:srcCompat="@drawable/dart_vader" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="352dp"
+            app:srcCompat="@drawable/uno_card_red5" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="223dp"
+            android:layout_height="385dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/uno_card_blue5" />
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="203dp"
+            android:layout_height="204dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginRight="-450dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Draw a card"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="322dp"
+                tools:layout_editor_absoluteX="342dp"
+                tools:layout_editor_absoluteY="964dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="say uno"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="322dp"
+                tools:layout_editor_absoluteX="342dp"
+                tools:layout_editor_absoluteY="1012dp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="finish turn"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="322dp"
+                tools:layout_editor_absoluteX="342dp"
+                tools:layout_editor_absoluteY="1060dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
