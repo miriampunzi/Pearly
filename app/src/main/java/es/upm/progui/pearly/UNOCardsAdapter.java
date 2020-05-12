@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,13 +34,11 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
 
     @Override
     public void onBindViewHolder(@NonNull CardItemViewHolder holder, int position) {
-        if (cards.get(position).getImageIdResource() == R.drawable.add_card) {
-            holder.deleteButton.setVisibility(View.GONE);
-            holder.editButton.setVisibility(View.GONE);
+        if (cards.get(position).getImageIdResource() != R.drawable.add_card) {
+            holder.parentView.setOnClickListener(new OnClickUNOCardListener(cards.get(position), fragmentActivity));
         }
 
         holder.cardImage.setImageResource(cards.get(position).getImageIdResource());
-        holder.deleteButton.setOnClickListener(new OnDeleteCardClickListener(cards.get(position), fragmentActivity));
     }
 
     @Override
@@ -48,14 +47,14 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
     }
 
     public class CardItemViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout parentView;
         ImageView cardImage;
-        ImageButton editButton, deleteButton;
 
         public CardItemViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            parentView = itemView.findViewById(R.id.constraintLayout_itemUnoCard);
             cardImage = itemView.findViewById(R.id.imageView_item_card_card);
-            editButton = itemView.findViewById(R.id.imageButton_itemUnoCard_editButton);
-            deleteButton = itemView.findViewById(R.id.imageButton_itemUnoCard_deleteButton);
         }
     }
 }

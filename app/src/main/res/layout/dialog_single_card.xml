@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView_dialogSingleCard_cardImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uno_card_blue0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_dialogSingleCard_cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:textSize="24sp"
+            android:textColor="@color/textDark"
+            android:text="Blue 0" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="80sp" />
+
+        <Button
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30sp"
+            android:drawableLeft="@drawable/ic_edit"
+            android:text="Edit card" />
+
+        <Button
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_delete"
+            android:text="Delete card" />
+
+    </LinearLayout>
+</LinearLayout>
