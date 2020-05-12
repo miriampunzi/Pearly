@@ -32,19 +32,29 @@ public class DialogSingleUNOCard extends DialogFragment {
         ImageView cardImage = singleUNOCardView.findViewById(R.id.imageView_dialogSingleCard_cardImage);
         cardImage.setImageResource(card.getImageIdResource());
 
-        TextView cardTitle = singleUNOCardView.findViewById(R.id.textView_dialogSingleCard_cardName);
-        cardTitle.setText(card.getName());
+        builder.setTitle(card.getName());
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-
-        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Back", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+            }
+        });
+
+        builder.setPositiveButton("Edit Card", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("Delete card", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+
+                DeleteCardConfirmationDialog deleteCardConfirmationDialog = new DeleteCardConfirmationDialog(card, fragmentActivity);
+                deleteCardConfirmationDialog.show(fragmentActivity.getSupportFragmentManager(), "DELETE DIALOG");
             }
         });
 
