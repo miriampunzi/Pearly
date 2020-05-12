@@ -6,9 +6,9 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:label="Home"
         android:id="@+id/nav_home"
         android:name="es.upm.progui.pearly.ui.home.HomeFragment"
-        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
     </fragment>
 

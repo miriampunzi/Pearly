@@ -17,7 +17,6 @@ import es.upm.progui.pearly.Database;
 import es.upm.progui.pearly.ListGamesAdapter;
 import es.upm.progui.pearly.R;
 import es.upm.progui.pearly.UNOCardsAdapter;
-import es.upm.progui.pearly.ui.home.HomeViewModel;
 
 public class ModificationFragment extends Fragment {
 
