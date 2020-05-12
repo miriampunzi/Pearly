@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingLeft="50sp"
     android:paddingRight="50sp"
-    tools:context=".ui.timi.GameDetailFragment">
+    tools:context=".fragments.GameDetailFragment">
 
     <ImageView
         android:id="@+id/imageView2"

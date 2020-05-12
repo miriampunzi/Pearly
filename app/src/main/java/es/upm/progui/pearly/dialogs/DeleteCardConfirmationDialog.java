@@ -1,17 +1,17 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.EditText;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 
-import es.upm.progui.pearly.ui.modification.ModificationFragment;
+import es.upm.progui.pearly.entities.Card_UNO;
+import es.upm.progui.pearly.database.Database;
+import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.fragments.ModificationFragment;
 
 public class DeleteCardConfirmationDialog extends DialogFragment {
 

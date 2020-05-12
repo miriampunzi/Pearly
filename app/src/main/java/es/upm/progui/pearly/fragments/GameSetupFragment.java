@@ -1,15 +1,13 @@
-package es.upm.progui.pearly.ui.timi;
+package es.upm.progui.pearly.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.NumberPicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import es.upm.progui.pearly.R;
 

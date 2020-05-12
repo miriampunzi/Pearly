@@ -1,9 +1,12 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.listeners;
 
 import android.view.View;
 import android.widget.AdapterView;
 
 import androidx.fragment.app.FragmentActivity;
+
+import es.upm.progui.pearly.dialogs.DialogSingleUNOCard;
+import es.upm.progui.pearly.entities.Card_UNO;
 
 public class OnClickUNOCardListener implements AdapterView.OnClickListener {
 

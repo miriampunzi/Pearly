@@ -1,4 +1,4 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.utils;
 
 public class Constants {
 

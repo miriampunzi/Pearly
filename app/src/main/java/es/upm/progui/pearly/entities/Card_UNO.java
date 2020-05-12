@@ -1,4 +1,4 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.entities;
 
 public class Card_UNO {
 

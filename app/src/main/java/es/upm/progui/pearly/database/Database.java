@@ -1,6 +1,10 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.database;
 
 import java.util.ArrayList;
+
+import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.entities.Card_UNO;
+import es.upm.progui.pearly.entities.Game;
 
 public class Database {
 

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     android:padding="50sp"
-    tools:context=".ui.timi.GameSetupFragment">
+    tools:context=".fragments.GameSetupFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

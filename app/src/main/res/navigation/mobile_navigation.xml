@@ -8,27 +8,17 @@
     <fragment
         android:label="Home"
         android:id="@+id/nav_home"
-        android:name="es.upm.progui.pearly.ui.home.HomeFragment"
+        android:name="es.upm.progui.pearly.fragments.HomeFragment"
         tools:layout="@layout/fragment_home">
     </fragment>
 
     <fragment
-        android:id="@+id/alejandro"
-        android:name="es.upm.progui.pearly.ui.alejandro.AlejandroFragment"
-        tools:layout="@layout/fragment_alejandro" />
-
-    <fragment
-        android:id="@+id/themis"
-        android:name="es.upm.progui.pearly.ui.themis.ThemisFragment"
-        tools:layout="@layout/fragment_alejandro" />
-
-    <fragment
         android:id="@+id/timi"
-        android:name="es.upm.progui.pearly.ui.timi.GameSetupFragment"
+        android:name="es.upm.progui.pearly.fragments.GameSetupFragment"
         tools:layout="@layout/fragment_game_setup" />
 
     <fragment
         android:id="@+id/miriam"
-        android:name="es.upm.progui.pearly.ui.modification.ModificationFragment"
+        android:name="es.upm.progui.pearly.fragments.ModificationFragment"
         tools:layout="@layout/fragment_modification" />
 </navigation>

@@ -1,22 +1,17 @@
-package es.upm.progui.pearly.ui.modification;
+package es.upm.progui.pearly.fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import es.upm.progui.pearly.Database;
-import es.upm.progui.pearly.ListGamesAdapter;
 import es.upm.progui.pearly.R;
-import es.upm.progui.pearly.UNOCardsAdapter;
+import es.upm.progui.pearly.adapters.UNOCardsAdapter;
 
 public class ModificationFragment extends Fragment {
 

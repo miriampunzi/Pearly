@@ -1,22 +1,19 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
-import es.upm.progui.pearly.ui.timi.GameDetailFragment;
+import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.entities.Game;
+import es.upm.progui.pearly.fragments.GameDetailFragment;
 
 public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.GameItemViewHolder> {
 

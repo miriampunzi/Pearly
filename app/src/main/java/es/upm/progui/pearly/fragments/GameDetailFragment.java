@@ -1,6 +1,4 @@
-package es.upm.progui.pearly.ui.timi;
-
-import androidx.lifecycle.ViewModelProviders;
+package es.upm.progui.pearly.fragments;
 
 import android.os.Bundle;
 

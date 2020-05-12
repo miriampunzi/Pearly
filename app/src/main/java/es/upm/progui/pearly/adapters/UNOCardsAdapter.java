@@ -1,10 +1,8 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +11,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import es.upm.progui.pearly.listeners.OnClickUNOCardListener;
+import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.entities.Card_UNO;
+import es.upm.progui.pearly.database.Database;
 
 public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardItemViewHolder> {
 

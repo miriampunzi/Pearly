@@ -1,4 +1,4 @@
-package es.upm.progui.pearly;
+package es.upm.progui.pearly.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 
-import es.upm.progui.pearly.ui.modification.ModificationFragment;
+import es.upm.progui.pearly.entities.Card_UNO;
+import es.upm.progui.pearly.R;
 
 public class DialogSingleUNOCard extends DialogFragment {
 
