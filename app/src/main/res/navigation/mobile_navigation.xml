@@ -7,6 +7,15 @@
 
     <fragment
         android:label="Pearly"
+        android:id="@+id/alejandro"
+        android:name="es.upm.progui.pearly.activities.fragmentAlejandro_main"
+        tools:layout="@layout/fragment_alejandro">
+
+
+    </fragment>
+
+    <fragment
+        android:label="Pearly"
         android:id="@+id/nav_home"
         android:name="es.upm.progui.pearly.fragments.HomeFragment"
         tools:layout="@layout/fragment_home">
