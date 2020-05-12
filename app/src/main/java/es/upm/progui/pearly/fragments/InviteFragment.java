@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 import es.upm.progui.pearly.R;
 
@@ -19,15 +22,21 @@ public class InviteFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_invite, container, false);
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View inviteView = inflater.inflate(R.layout.fragment_invite, container, false);
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        // TODO: Use the ViewModel
-    }
+        final TextView friendsInvited = inviteView.findViewById(R.id.textView_fragmentInvite_friendsInvited);
+        final Button startGameButton = inviteView.findViewById(R.id.button_fragmentInvite_startGame);
 
+        CheckBox darthVaderCheckbox = inviteView.findViewById(R.id.checkbox_fragmentInvite_darthVader);
+        darthVaderCheckbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                friendsInvited.setText("Friends invited: 1");
+                startGameButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        return inviteView;
+    }
 }

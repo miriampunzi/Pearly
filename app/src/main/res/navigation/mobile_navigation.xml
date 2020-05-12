@@ -50,4 +50,6 @@
         android:id="@+id/nav_gameModification"
         android:name="es.upm.progui.pearly.fragments.ModificationFragment"
         tools:layout="@layout/fragment_modification" />
+
+
 </navigation>
