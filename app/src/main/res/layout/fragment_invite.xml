@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.timi.InviteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="30dp"
+        android:padding="30sp"
+        android:text="@string/inthisgame"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:typeface="serif" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/me"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:paddingLeft="30dp"
+                android:textColor="@color/white"
+                android:drawableTop="@drawable/user"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_margin="50dp"
+            ></SearchView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recent"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingLeft="30dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/vader"
+            android:textSize="40sp"
+            android:drawableLeft="@drawable/vader_mini"
+            android:paddingLeft="130dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:drawablePadding="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/kermit"
+            android:textSize="40sp"
+            android:drawableLeft="@drawable/kerm_mini"
+            android:paddingLeft="130dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:drawablePadding="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/spiderman"
+            android:textSize="40sp"
+            android:drawableLeft="@drawable/spiderman_mini"
+            android:paddingLeft="130dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:drawablePadding="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/pr"
+            android:textSize="40sp"
+            android:drawableLeft="@drawable/unicorn_mini"
+            android:paddingLeft="130dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:drawablePadding="30dp"/>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
