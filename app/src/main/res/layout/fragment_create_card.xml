@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/create_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -15,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/empty_image"
+            android:id="@+id/imageView_fragmentCreateCard_trollFaceCard"
             android:layout_width="400dp"
             android:layout_height="600dp"
             android:src="@drawable/empty_card" />
@@ -44,14 +43,13 @@
                 android:textAllCaps="false" />
 
             <TableRow
-                android:id="@+id/hr"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:layout_margin="30dp"
                 android:background="@android:color/white" />
 
             <Button
-                android:id="@+id/add_image"
+                android:id="@+id/button_fragmentCreateCard_addImage"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -127,7 +125,6 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/write_rule"
             android:layout_width="600dp"
             android:layout_height="100dp"
             android:layout_marginTop="30dp"
@@ -140,7 +137,6 @@
         </EditText>
 
         <ImageView
-            android:id="@+id/undo_create"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="30dp"
