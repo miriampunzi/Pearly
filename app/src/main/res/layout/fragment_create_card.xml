@@ -155,6 +155,7 @@
             android:text="BACK" />
 
         <Button
+            android:id="@+id/button_fragmentCreateCard_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CREATE" />

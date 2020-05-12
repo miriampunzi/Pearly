@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import es.upm.progui.pearly.fragments.CreateCardFragment;
 import es.upm.progui.pearly.listeners.OnClickUNOCardListener;
 import es.upm.progui.pearly.R;
 import es.upm.progui.pearly.entities.Card_UNO;
@@ -23,8 +24,6 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
     private FragmentActivity fragmentActivity;
 
     public UNOCardsAdapter(FragmentActivity fragmentActivity) {
-        if (cards.get(0).getImageIdResource() != R.drawable.add_card)
-            cards.add(0, new Card_UNO(R.drawable.add_card, null, false, -1, null, null, null));
         this.fragmentActivity = fragmentActivity;
     }
 
@@ -39,6 +38,14 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
     public void onBindViewHolder(@NonNull CardItemViewHolder holder, int position) {
         if (cards.get(position).getImageIdResource() != R.drawable.add_card) {
             holder.parentView.setOnClickListener(new OnClickUNOCardListener(cards.get(position), fragmentActivity));
+        }
+        else {
+            holder.parentView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new CreateCardFragment()).commit();
+                }
+            });
         }
 
         holder.cardImage.setImageResource(cards.get(position).getImageIdResource());

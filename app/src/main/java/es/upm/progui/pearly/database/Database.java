@@ -60,6 +60,7 @@ public class Database {
     };
 
     public static ArrayList<Card_UNO> UNO_CARDS = new ArrayList<Card_UNO>() {{
+        add(new Card_UNO(R.drawable.add_card, null, false, -1, null, null, null));
         add(new Card_UNO(R.drawable.uno_card_blue0, "Blue 0", true, 0, null, "BLUE", null));
         add(new Card_UNO(R.drawable.uno_card_blue1, "Blue 1", true, 1, null, "BLUE", null));
         add(new Card_UNO(R.drawable.uno_card_blue2, "Blue 2", true, 2, null, "BLUE", null));

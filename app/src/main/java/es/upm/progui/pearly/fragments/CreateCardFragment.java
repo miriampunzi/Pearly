@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.database.Database;
+import es.upm.progui.pearly.entities.Card_UNO;
 
 public class CreateCardFragment extends Fragment {
 
@@ -38,6 +40,15 @@ public class CreateCardFragment extends Fragment {
             public void onClick(View v) {
                 Intent pickPhoto = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(pickPhoto, 1);
+            }
+        });
+
+        Button createButton = createCardView.findViewById(R.id.button_fragmentCreateCard_create);
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Database.UNO_CARDS.add(1, new Card_UNO(R.drawable.troll_card, "Troll Card", false, -1, null, "BLACK", null));
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).commit();
             }
         });
 

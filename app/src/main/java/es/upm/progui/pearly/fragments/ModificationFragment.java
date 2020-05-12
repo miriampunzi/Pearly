@@ -19,7 +19,6 @@ public class ModificationFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_modification, container, false);
 
         RecyclerView UNOCardList = root.findViewById(R.id.recyclerView_fragmentModification_cards);
-        UNOCardList.setHasFixedSize(true);
         UNOCardsAdapter adapter = new UNOCardsAdapter(getActivity());
         UNOCardList.setAdapter(adapter);
         GridLayoutManager UNOCardsLayoutManager = new GridLayoutManager(getContext(), 4);
