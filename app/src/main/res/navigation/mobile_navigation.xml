@@ -24,8 +24,8 @@
 
     <fragment
         android:id="@+id/timi"
-        android:name="es.upm.progui.pearly.ui.timi.TimiFragment"
-        tools:layout="@layout/fragment_alejandro" />
+        android:name="es.upm.progui.pearly.ui.timi.GameSetupFragment"
+        tools:layout="@layout/fragment_game_setup" />
 
     <fragment
         android:id="@+id/miriam"
