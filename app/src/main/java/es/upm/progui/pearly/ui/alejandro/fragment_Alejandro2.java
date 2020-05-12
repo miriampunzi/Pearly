@@ -20,9 +20,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import es.upm.progui.pearly.R;
 
-public class AlejandroFragment extends AppCompatActivity implements View.OnDragListener, View.OnLongClickListener {
+public class fragment_Alejandro2 extends AppCompatActivity implements View.OnDragListener, View.OnLongClickListener {
     Context ctx;
-    ImageView imgVw ;
+    int unoFlag;
+    //ImageView imgVw ;
     ImageView im1;
     ImageView im2;
     TextView turn;
@@ -32,13 +33,13 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("***************MAIN ACTIVITY****************");
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.fragment_alejandro);
+        setContentView(R.layout.fragment_alejandro2);
         //Find all views and set Tag to all draggable views
        /* TextView txtVw = (TextView) findViewById(R.id.lbl);
         txtVw.setTag("DRAGGABLE TEXTVIEW");
         txtVw.setOnLongClickListener(this);*/
-       Button draw = findViewById(R.id.button4);
+       unoFlag = 0;
+        Button draw = findViewById(R.id.button4);
 
 
         turn =(TextView)findViewById(R.id.textView2);
@@ -46,15 +47,15 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
         im1 = (ImageView) findViewById(R.id.imageView3);
         im1.setTag("not");
         im2 = (ImageView) findViewById(R.id.imageView5);
-        im2.setTag("incorrect");
+        im2.setTag("correct");
 
         im1.setOnLongClickListener(this);
 
-        imgVw = (ImageView) findViewById(R.id.imageView);
-        imgVw.setTag("correct");
+        //imgVw = (ImageView) findViewById(R.id.imageView);
+        //imgVw.setTag("correct");
 
 
-        imgVw.setOnLongClickListener(this);
+        //imgVw.setOnLongClickListener(this);
         im2.setOnLongClickListener(this);
 
         finishTurn = (Button) findViewById(R.id.button6);
@@ -65,7 +66,7 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
 
             public void onClick(View v){
 
-                Toast.makeText(AlejandroFragment.this, "There is no need to draw a card", Toast.LENGTH_LONG).show();
+                Toast.makeText(fragment_Alejandro2.this, "There is no need to draw a card", Toast.LENGTH_LONG).show();
 
 
 
@@ -76,8 +77,11 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
         sayUno.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
+                if (unoFlag!=0){
+                    Toast.makeText(fragment_Alejandro2.this, "UNO", Toast.LENGTH_LONG).show();
+                }else{
 
-                    Toast.makeText(AlejandroFragment.this, "Are you sure you can say UNO?", Toast.LENGTH_SHORT).show();
+                Toast.makeText(fragment_Alejandro2.this, "Are you sure you can say UNO?", Toast.LENGTH_SHORT).show();}
 
 
 
@@ -114,7 +118,7 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
         System.out.println("··········33333333333####DATA IS"+(data.getDescription().getLabel()).equals("correct"));
 
         if ((data.getDescription().getLabel()).equals("correct")){
-        return true;
+            return true;
         }else {
 
             return false;
@@ -144,7 +148,7 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
                     // to give any color tint to the View to indicate that it can accept data.
                     // v.getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
                     // Invalidate the view to force a redraw in the new tint
-                     v.invalidate();
+                    v.invalidate();
                     // returns true to indicate that the View can accept the dragged data.
                     return true;
                 }
@@ -177,11 +181,11 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
                 // Gets the item containing the dragged data
                 //item = event.getClipData().getItemAt(0);
                 // Gets the text data from the item.
-               // dragData = item.getText().toString();
+                // dragData = item.getText().toString();
                 // Displays a message containing the dragged data.
                 //Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
                 // Turns off any color tints
-               // System.out.println("###############CLIP DATA IS ###############"+dragData);
+                // System.out.println("###############CLIP DATA IS ###############"+dragData);
 //                v.getBackground().clearColorFilter();
                 // Invalidates the view to force a redraw
                 v.invalidate();
@@ -207,12 +211,12 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
                 //System.out.println("########@@@@@@@RESULT OF drag"+event+"and "+R.id.imageView);
                 if (event.getResult()) {
                     //System.out.println("******CLIP***********");
-                    imgVw.setVisibility(View.INVISIBLE);
-
+                   im2.setVisibility(View.INVISIBLE);
+                   unoFlag +=1;
                     ImageView im = (ImageView) findViewById(R.id.imageView7);
                     //turn.setText("DARTH VADER'S TURN");
                     //SystemClock.sleep(1500);
-                    im.setImageResource(R.drawable.uno_card_green3);
+                    im.setImageResource(R.drawable.uno_card_red2);
 
 
                     //Toast.makeText(this, "The drop was handled.", Toast.LENGTH_SHORT).show();
@@ -224,9 +228,10 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
                             turn.setText("DARTH VADER'S TURN");
                             SystemClock.sleep(2000);
                             ImageView im = (ImageView) findViewById(R.id.imageView7);
-                            im.setImageResource(R.drawable.uno_card_green2);
+                            im.setImageResource(R.drawable.uno_card_red5);
+
                             SystemClock.sleep(1000);
-                            Intent openIntent = new Intent(AlejandroFragment.this, fragment_Alejandro2.class);
+                            Intent openIntent = new Intent(fragment_Alejandro2.this, fragment_Alejandro3.class);
                             startActivity(openIntent);
 
 
@@ -242,7 +247,7 @@ public class AlejandroFragment extends AppCompatActivity implements View.OnDragL
                     return false;
                 }
 
-            // An unknown action type was received.
+                // An unknown action type was received.
             default:
                 Log.e("DragDrop Example", "Unknown action type received by OnDragListener.");
                 break;
