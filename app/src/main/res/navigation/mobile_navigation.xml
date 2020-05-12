@@ -51,5 +51,9 @@
         android:name="es.upm.progui.pearly.fragments.ModificationFragment"
         tools:layout="@layout/fragment_modification" />
 
+    <fragment
+        android:id="@+id/themis"
+        android:name="es.upm.progui.pearly.fragments.TestingFragment"
+        tools:layout="@layout/testing_home" />
 
 </navigation>

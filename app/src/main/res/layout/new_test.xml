@@ -32,6 +32,7 @@
         </TextView>
 
         <EditText
+            android:id="@+id/test_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Add Name"
@@ -42,6 +43,7 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@android:color/white">
         </EditText>
+
     </LinearLayout>
 
     <LinearLayout
@@ -60,8 +62,14 @@
             android:layout_marginLeft="-165dp">
         </TextView>
 
-        <include layout="@layout/spinner_testing">
-        </include>
+        <Spinner
+            android:id="@+id/spinner_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:layout_margin="5dp">
+        </Spinner>
     </LinearLayout>
 
     <LinearLayout
@@ -80,8 +88,14 @@
             android:layout_marginLeft="-160dp">
         </TextView>
 
-        <include layout="@layout/spinner_testing">
-        </include>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/spinner_2"
+            android:spinnerMode="dropdown"
+            android:layout_margin="5dp">
+        </Spinner>
     </LinearLayout>
 
     <LinearLayout
@@ -100,8 +114,14 @@
             android:layout_marginLeft="-160dp">
         </TextView>
 
-        <include layout="@layout/spinner_testing">
-        </include>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/spinner_3"
+            android:spinnerMode="dropdown"
+            android:layout_margin="5dp">
+        </Spinner>
     </LinearLayout>
 
     <Button
