@@ -1,6 +1,8 @@
 package es.upm.progui.pearly;
 
-public class Card_UNO {
+import java.io.Serializable;
+
+public class Card_UNO implements Serializable {
 
     private int imageIdResource;
     private String name;

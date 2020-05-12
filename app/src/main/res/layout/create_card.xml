@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    tools:context=".ui.themis.ThemisFragment">
 
     <include layout="@layout/app_bar_create" />
 
@@ -24,110 +26,101 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="65dp"
-                android:text="Upload Existing Design"
-                android:textSize="20sp"
-                android:textAllCaps="false"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
-                android:background="@drawable/button_shape">
-            </Button>
+                android:background="@drawable/button_shape"
+                android:text="Upload Existing Design"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="65dp"
-                android:text="Use Previous Design"
-                android:textSize="20sp"
-                android:textAllCaps="false"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/button_shape">
-            </Button>
+                android:background="@drawable/button_shape"
+                android:text="Use Previous Design"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
 
             <TableRow
                 android:id="@+id/hr"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="15dp"
-                android:background="@android:color/white">
-            </TableRow>
+                android:layout_marginBottom="50dp"
+                android:background="@android:color/white"></TableRow>
 
             <Button
                 android:id="@+id/add_image"
                 android:layout_width="250dp"
                 android:layout_height="65dp"
-                android:text="Add Image"
-                android:textSize="20sp"
-                android:textAllCaps="false"
                 android:layout_gravity="center"
-                android:background="@drawable/button_shape">
-            </Button>
+                android:background="@drawable/button_shape"
+                android:text="Add Image"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="65dp"
-                android:text="Draw Image"
-                android:textSize="20sp"
-                android:textAllCaps="false"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/button_shape">
-            </Button>
+                android:background="@drawable/button_shape"
+                android:text="Draw Image"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
 
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Choose Primary Color"
-                        android:textColor="@android:color/white"
-                        android:layout_margin="20dp"
-                        android:textSize="20dp">
-                    </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Choose Primary Color"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"></TextView>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/color_palette">
-                    </ImageView>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/color_palette"></ImageView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:layout_margin="10dp"
                 android:gravity="center"
-                android:layout_margin="10dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:text="Choose Secondary Color"
                     android:textColor="@android:color/white"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="20dp">
-                </TextView>
+                    android:textSize="20dp"></TextView>
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_margintop="20dp"
-                    android:src="@drawable/color_palette">
-                </ImageView>
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/color_palette"></ImageView>
 
             </LinearLayout>
         </LinearLayout>
@@ -136,11 +129,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Rule: *"
-        android:textSize="50sp"
-        android:textColor="@android:color/white"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="50dp">
+        android:text="Add Rule: *"
+        android:textColor="@android:color/white"
+        android:textSize="50sp">
 
     </TextView>
 
@@ -149,30 +142,31 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/write_rule"
             android:layout_width="550dp"
             android:layout_height="match_parent"
-            android:text="Write your rule"
-            android:gravity="top"
-            android:textColor="@android:color/white"
-            android:textSize="39sp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"
+            android:layout_marginRight="50dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/text_shape"
-            android:padding="15dp"/>
+            android:gravity="top"
+            android:padding="15dp"
+            android:hint="Write your rule"
+            android:textColorHint="@color/white"
+            android:textColor="@android:color/white"
+            android:textSize="39sp">
+        </EditText>
 
         <ImageView
             android:id="@+id/undo_create"
             android:layout_width="match_parent"
             android:layout_height="190dp"
-            android:src="@drawable/undo"
-            android:clickable="true"
             android:layout_marginTop="25dp"
-            android:layout_marginRight="25dp">
-        </ImageView>
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:src="@drawable/undo"></ImageView>
 
     </LinearLayout>
 

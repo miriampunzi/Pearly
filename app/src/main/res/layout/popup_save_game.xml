@@ -58,9 +58,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
-        android:text="Type your Game Name"
+        android:hint="Type your Game Name"
         android:textColor="@android:color/white"
-        android:hint="Underline color change"
+        android:textColorHint="@color/white"
         android:backgroundTint="@android:color/white"/>
 
     <LinearLayout

@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/themis"
         android:name="es.upm.progui.pearly.ui.themis.ThemisFragment"
-        tools:layout="@layout/fragment_alejandro" />
+        tools:layout="@layout/create_card" />
 
     <fragment
         android:id="@+id/timi"
