@@ -21,15 +21,11 @@ public class ThemisFragment extends Fragment {
 
     private ThemisViewModel themisViewModel;
     private Button btn_add_image;
-    private EditText rule;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         themisViewModel = ViewModelProviders.of(this).get(ThemisViewModel.class);
         View root = inflater.inflate(R.layout.create_card, container, false);
-
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
-        rule = (EditText) root.findViewById(R.id.write_rule);
 
         btn_add_image = (Button) root.findViewById(R.id.add_image);
 
@@ -43,15 +39,6 @@ public class ThemisFragment extends Fragment {
                 transaction.commit();
             }
         });
-
-        Bundle bundle = getArguments();
-        Card_UNO card_uno = bundle.getParcelable("Key_List");
-
-        SharedPreferences settings = this.getActivity().getSharedPreferences("PREFS", 0);
-        rule.setText(settings.getString("value", ""));
-
-        card_uno.setRule("");
-
         return root;
     }
 }
