@@ -26,6 +26,7 @@ public class DeleteCardConfirmationDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+        builder.setTitle("Confirmation dialog");
         builder.setMessage("Are you sure you want to delete " + card.getName() + "?");
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

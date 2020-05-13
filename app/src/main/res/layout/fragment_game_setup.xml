@@ -48,7 +48,7 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="15dp"
         android:background="#9C99E6"
         android:progress="@android:integer/config_longAnimTime"
         android:progressBackgroundTint="@color/cardview_light_background" />
@@ -64,7 +64,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="15dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal" >
 
         <ImageView
@@ -78,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:gravity="center"
             android:background="@drawable/background_edit_text"
             android:text="3" />
 
@@ -99,7 +101,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="15dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal" >
 
         <ImageView
@@ -114,6 +117,7 @@
             android:background="@drawable/background_edit_text"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:gravity="center"
             android:text="2" />
 
         <ImageView
@@ -128,6 +132,7 @@
         android:layout_height="wrap_content"
         android:text="Accessibility module"
         android:textColor="@color/textLight"
+        android:gravity="center_vertical"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:textSize="@dimen/page_title"
@@ -144,25 +149,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="15dp"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/button_fragmentGameSetup_inviteFromFriendList"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:background="@color/iconLight"
-            android:textColor="@color/textAccent"
+            android:backgroundTint="@color/white"
             android:text="@string/invitelist" />
 
         <Button
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:textColor="@color/textAccent"
-            android:background="@color/iconLight"
+            android:backgroundTint="@color/white"
             android:text="@string/code" />
 
         <TextView
@@ -177,8 +178,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:textColor="@color/textAccent"
-            android:background="@color/iconLight"
+            android:backgroundTint="@color/iconLight"
             android:text="@string/play_online" />
 
     </LinearLayout>

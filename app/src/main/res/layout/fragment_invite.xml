@@ -54,6 +54,7 @@
                 android:id="@+id/button_fragmentInvite_startGame"
                 android:layout_width="150sp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:text="Start Game"
                 android:visibility="gone"/>
 
