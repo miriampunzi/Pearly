@@ -2,13 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    android:paddingLeft="50sp"
-    android:paddingRight="50sp"
-    tools:context=".fragments.GameDetailFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,111 +13,115 @@
         android:src="@drawable/uno_table" />
 
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:padding="30dp"
+        tools:context=".fragments.GameDetailFragment">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/uno_mini" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/uno_mini" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="UNO"
+                android:textColor="@color/textLight"
+                android:textSize="32dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_fragmentGameDetail_startGame"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/iconLight"
+                android:text="Start game"
+                android:drawableLeft="@drawable/ic_play" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:tint="@color/iconLight"
+                android:src="@drawable/ic_favorite" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:tint="@color/iconLight"
+                android:src="@drawable/ic_info" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:tint="@color/iconLight"
+                android:src="@drawable/ic_video" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Category: Card game, Shedding-type"
+            android:textColor="@color/textMedium" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:text="UNO"
-            android:textColor="@color/textLight"
-            android:textSize="32dp"/>
-    </LinearLayout>
+            android:layout_marginTop="15dp"
+            android:text="@string/detail_about"
+            android:textColor="@color/textLight" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/button_fragmentGameDetail_startGame"
-            android:layout_width="150dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/iconLight"
-            android:text="Start game"
-            android:drawableLeft="@drawable/ic_play"
-            android:drawableTint="@color/textAccent"
-            android:textColor="@color/textAccent" />
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/page_title"
+            android:text="Options:"
+            android:textColor="@color/textLight" />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
-            android:tint="@color/iconLight"
-            android:src="@drawable/ic_favorite" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
-            android:tint="@color/iconLight"
-            android:src="@drawable/ic_info" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
-            android:tint="@color/iconLight"
-            android:src="@drawable/ic_video" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Category: Shedding-type"
-        android:textColor="@color/textMedium" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/detail_about"
-        android:textColor="@color/textLight" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="@dimen/page_title"
-        android:text="Options:"
-        android:textColor="@color/textLight" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/button_fragmentGameDetail_modifyGame"
-            android:layout_width="130dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/iconLight"
-            android:drawableLeft="@drawable/ic_edit"
-            android:drawableTint="@color/textAccent"
-            android:text="@string/modify"
-            android:textColor="@color/textAccent" />
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
 
-        <Button
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:background="@color/iconLight"
-            android:drawableLeft="@drawable/ic_test"
-            android:drawableTint="@color/textAccent"
-            android:text="@string/test"
-            android:textColor="@color/textAccent" />
+            <Button
+                android:id="@+id/button_fragmentGameDetail_modifyGame"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/iconLight"
+                android:drawableLeft="@drawable/ic_edit"
+                android:text="@string/modify" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="@color/iconLight"
+                android:drawableLeft="@drawable/ic_test"
+                android:text="@string/test" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
 </LinearLayout>
+

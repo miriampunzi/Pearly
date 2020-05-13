@@ -48,13 +48,15 @@
             />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_edit"
+            android:backgroundTint="@color/white"
             android:text="@string/fragment_modification_editSelected" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="200sp"
+            android:backgroundTint="@color/white"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_delete"
             android:text="@string/fragment_modification_deleteSelected" />
@@ -121,13 +123,52 @@
             android:layout_width="wrap_content"
             android:layout_height="30sp" />
 
-        <Button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp"
+            android:textColor="@color/textLight"
+            android:textSize="@dimen/page_title"
+            android:text="Set the game:"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_fragmentModification_publicPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioButton_fragmentModification_private"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Private"
+                android:textColor="@color/textLight"
+                android:buttonTint="@color/iconLight"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioButton_fragmentModification_public"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/iconLight"
+                android:textColor="@color/textLight"
+                android:text="Public"/>
+        </RadioGroup>
+
+        <Space
             android:layout_width="wrap_content"
+            android:layout_height="30sp" />
+
+        <Button
+            android:id="@+id/button_fragmentModification_applyChanges"
+            android:layout_width="200sp"
+            android:backgroundTint="@color/white"
             android:layout_height="wrap_content"
             android:text="@string/fragment_modification_applyChanges" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="200sp"
+            android:backgroundTint="@color/white"
             android:layout_height="wrap_content"
             android:text="@string/fragment_modification_discard_changes" />
 

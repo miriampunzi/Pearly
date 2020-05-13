@@ -51,5 +51,10 @@
         android:name="es.upm.progui.pearly.fragments.ModificationFragment"
         tools:layout="@layout/fragment_modification" />
 
+    <fragment
+        android:label="Create card"
+        android:id="@+id/themis"
+        android:name="es.upm.progui.pearly.fragments.CreateCardFragment"
+        tools:layout="@layout/fragment_create_card" />
 
 </navigation>

@@ -8,58 +8,63 @@ import es.upm.progui.pearly.entities.Game;
 
 public class Database {
 
-    public static Game[] GAMES_CREATED = new Game[] {
-        new Game("Briscola 2.0", R.drawable.briscola),
-        new Game("CAH - class version", R.drawable.cah),
-        new Game("UNO for color blinds", R.drawable.uno),
-    };
+    public static ArrayList<Game> GAMES_CREATED = new ArrayList<Game>()  {{
+        add(new Game("Briscola 2.0", R.drawable.briscola));
+        add(new Game("CAH - class version", R.drawable.cah));
+        add(new Game("UNO for color blinds", R.drawable.uno));
+    }};
 
-    public static Game[] GAMES_FAVORITES = new Game[] {
-        new Game("UNO", R.drawable.uno),
-        new Game("D&D", R.drawable.d_and_d),
-        new Game("Bisca", R.drawable.bisca),
-        new Game("Catan", R.drawable.catan),
-        new Game("Exploding kittens", R.drawable.exploding_kittens),
-        new Game("Scala 40", R.drawable.scala40),
-        new Game("Briscola", R.drawable.briscola),
-        new Game("Cards Against Humanity", R.drawable.cah),
-    };
+    public static ArrayList<Game> GAMES_FAVORITES = new ArrayList<Game>() {{
+        add(new Game("UNO", R.drawable.uno));
+        add(new Game("D&D", R.drawable.d_and_d));
+        add(new Game("Bisca", R.drawable.bisca));
+        add(new Game("Catan", R.drawable.catan));
+        add(new Game("Exploding kittens", R.drawable.exploding_kittens));
+        add(new Game("Scala 40", R.drawable.scala40));
+        add(new Game("Briscola", R.drawable.briscola));
+        add(new Game("Cards Against Humanity", R.drawable.cah));
+    }};
 
-    public static Game[] GAMES_TOP_10 = new Game[] {
-        new Game("Risiko", R.drawable.risiko),
-        new Game("Taboo", R.drawable.taboo),
-        new Game("Zombicide", R.drawable.zombicide),
-        new Game("Cluedo", R.drawable.cluedo),
-        new Game("Trivial Pursuit", R.drawable.trivial_pursuit),
-        new Game("Monopoly", R.drawable.monopoly),
-        new Game("Briscola", R.drawable.briscola),
-        new Game("UNO", R.drawable.uno),
-        new Game("Cards Against Humanity", R.drawable.cah),
-        new Game("D&D", R.drawable.d_and_d),
-    };
+    public static ArrayList<Game> GAMES_TOP_10 = new ArrayList<Game>() {{
+        add(new Game("Risiko", R.drawable.risiko));
+        add(new Game("Taboo", R.drawable.taboo));
+        add(new Game("Zombicide", R.drawable.zombicide));
+        add(new Game("Cluedo", R.drawable.cluedo));
+        add(new Game("Trivial Pursuit", R.drawable.trivial_pursuit));
+        add(new Game("Monopoly", R.drawable.monopoly));
+        add(new Game("Briscola", R.drawable.briscola));
+        add(new Game("UNO", R.drawable.uno));
+        add(new Game("Cards Against Humanity", R.drawable.cah));
+        add(new Game("D&D", R.drawable.d_and_d));
+    }};
 
-    public static Game[] GAME_CLASSIC = new Game[] {
-        new Game("Chess", R.drawable.chess),
-        new Game("Cluedo", R.drawable.cluedo),
-        new Game("Monopoly", R.drawable.monopoly),
-        new Game("Poker", R.drawable.poker),
-        new Game("Risiko", R.drawable.risiko),
-        new Game("Othello", R.drawable.othello),
-        new Game("Solitarie", R.drawable.solitaire),
-        new Game("UNO", R.drawable.uno),
-    };
+    public static ArrayList<Game> GAME_CLASSIC = new ArrayList<Game>() {{
+        add(new Game("Chess", R.drawable.chess));
+        add(new Game("Cluedo", R.drawable.cluedo));
+        add(new Game("Monopoly", R.drawable.monopoly));
+        add(new Game("Poker", R.drawable.poker));
+        add(new Game("Risiko", R.drawable.risiko));
+        add(new Game("Othello", R.drawable.othello));
+        add(new Game("Solitarie", R.drawable.solitaire));
+        add(new Game("UNO", R.drawable.uno));
+    }};
 
-    public static Game[] GAMES_SOLITARY = new Game[] {
-        new Game("Bridge", R.drawable.bridge),
-        new Game("Canfield", R.drawable.canfield),
-        new Game("Freecell", R.drawable.freecell),
-        new Game("Golf", R.drawable.golf),
-        new Game("Pyramid", R.drawable.pyramid),
-        new Game("Solitarie", R.drawable.solitaire),
-        new Game("Spider", R.drawable.spider)
-    };
+    public static ArrayList<Game> GAMES_SOLITARY = new ArrayList<Game>() {{
+        add(new Game("Bridge", R.drawable.bridge));
+        add(new Game("Canfield", R.drawable.canfield));
+        add(new Game("Freecell", R.drawable.freecell));
+        add(new Game("Golf", R.drawable.golf));
+        add(new Game("Pyramid", R.drawable.pyramid));
+        add(new Game("Solitarie", R.drawable.solitaire));
+        add(new Game("Spider", R.drawable.spider));
+    }};
 
     public static ArrayList<Card_UNO> UNO_CARDS = new ArrayList<Card_UNO>() {{
+        add(new Card_UNO(R.drawable.add_card, null, false, -1, null, null, null));
+
+        add(new Card_UNO(R.drawable.uno_card_wildchange, "Whild Change", false, -1, "DRAW 4", "BLACK", null));
+        add(new Card_UNO(R.drawable.uno_card_wilddraw4, "Wild Draw 4", false, -1, "CHANGE", "BLACK", null));
+
         add(new Card_UNO(R.drawable.uno_card_blue0, "Blue 0", true, 0, null, "BLUE", null));
         add(new Card_UNO(R.drawable.uno_card_blue1, "Blue 1", true, 1, null, "BLUE", null));
         add(new Card_UNO(R.drawable.uno_card_blue2, "Blue 2", true, 2, null, "BLUE", null));
@@ -115,8 +120,5 @@ public class Database {
         add(new Card_UNO(R.drawable.uno_card_greendraw2, "Green Draw 2", false, -1, "DRAW 2", "GREEN", null));
         add(new Card_UNO(R.drawable.uno_card_greenreverse, "Green Reverse", false, -1, "REVERSE", "GREEN", null));
         add(new Card_UNO(R.drawable.uno_card_greenskip, "Green Skip", false, -1, "SKIP", "GREEN", null));
-
-        add(new Card_UNO(R.drawable.uno_card_wildchange, "Whild Change", false, -1, "DRAW 4", "BLACK", null));
-        add(new Card_UNO(R.drawable.uno_card_wilddraw4, "Wild Draw 4", false, -1, "CHANGE", "BLACK", null));
     }};
 }

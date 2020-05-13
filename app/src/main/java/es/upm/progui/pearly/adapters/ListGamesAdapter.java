@@ -11,16 +11,18 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 import es.upm.progui.pearly.R;
 import es.upm.progui.pearly.entities.Game;
 import es.upm.progui.pearly.fragments.GameDetailFragment;
 
 public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.GameItemViewHolder> {
 
-    private Game[] games;
+    private ArrayList<Game> games;
     private FragmentActivity fragmentActivity;
 
-    public ListGamesAdapter(Game[] games, FragmentActivity fragmentActivity) {
+    public ListGamesAdapter(ArrayList<Game> games, FragmentActivity fragmentActivity) {
         this.games = games;
         this.fragmentActivity = fragmentActivity;
     }
@@ -34,14 +36,14 @@ public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.Game
 
     @Override
     public void onBindViewHolder(@NonNull GameItemViewHolder holder, int position) {
-        holder.gameTitle.setText(games[position].getName());
-        holder.gameImage.setImageResource(games[position].getImageIdResource());
+        holder.gameTitle.setText(games.get(position).getName());
+        holder.gameImage.setImageResource(games.get(position).getImageIdResource());
 
-        if (games[position].getName() == "UNO") {
+        if (games.get(position).getName() == "UNO") {
             holder.parentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).commit();
+                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).addToBackStack(null).commit();
                 }
             });
         }
@@ -49,7 +51,7 @@ public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.Game
 
     @Override
     public int getItemCount() {
-        return games.length;
+        return games.size();
     }
 
     public class GameItemViewHolder extends RecyclerView.ViewHolder {
