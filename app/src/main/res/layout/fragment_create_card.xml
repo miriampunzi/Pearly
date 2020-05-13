@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,96 +18,129 @@
             android:id="@+id/imageView_fragmentCreateCard_trollFaceCard"
             android:layout_width="400dp"
             android:layout_height="600dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/empty_card" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_margin="30dp"
             android:orientation="vertical">
 
-            <Button
-                android:layout_width="250dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:text="Card name: *"
+                android:textSize="@dimen/page_title"
+                android:textColor="@color/textLight"/>
+
+            <EditText
+                android:id="@+id/editText_dialogCreateCard_cardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_edit_text"
+                android:gravity="top"
+                android:padding="15dp"
+                android:hint="Write your card name"
+                android:textColor="@color/textDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Design:"
+                android:textSize="@dimen/page_title"
+                android:textColor="@color/textLight"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/button_shape"
+                android:layout_marginTop="15dp"
                 android:text="Upload Existing Design"
                 android:textAllCaps="false" />
 
             <Button
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/button_shape"
                 android:text="Use Previous Design"
                 android:textAllCaps="false" />
 
-            <TableRow
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_margin="30dp"
-                android:background="@android:color/white" />
+                android:layout_height="wrap_content"
+                android:text="Images:"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/page_title"
+                android:textColor="@color/textLight"/>
 
             <Button
                 android:id="@+id/button_fragmentCreateCard_addImage"
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/button_shape"
                 android:text="Add Image"
                 android:textAllCaps="false" />
 
             <Button
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/button_shape"
                 android:text="Draw Image"
                 android:textAllCaps="false" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Colors:"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/page_title"
+                android:textColor="@color/textLight"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/color_palette" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
                     android:text="Choose Primary Color"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/page_title" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/color_palette" />
-
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/color_palette" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
                     android:text="Choose Secondary Color"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/page_title" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/color_palette" />
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -115,39 +149,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Add Rule: *"
+        android:text="Rule: *"
         android:textColor="@android:color/white"
         android:textSize="@dimen/page_title" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editText_dialogCreateCard_cardRule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="600dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/text_shape"
-            android:gravity="top"
-            android:padding="15dp"
-            android:hint="Write your rule"
-            android:textColorHint="@color/white"
-            android:textColor="@android:color/white" >
-        </EditText>
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:clickable="true"
-            android:src="@drawable/undo" />
-    </LinearLayout>
+        android:lines="5"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_edit_text"
+        android:gravity="top"
+        android:padding="15dp"
+        android:hint="Write your rule"
+        android:textColor="@color/textDark" />
 
     <LinearLayout
+        android:layout_marginTop="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <Button
             android:layout_width="wrap_content"
@@ -155,9 +182,15 @@
             android:text="BACK" />
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNDO" />
+
+        <Button
             android:id="@+id/button_fragmentCreateCard_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:text="CREATE" />
 
     </LinearLayout>

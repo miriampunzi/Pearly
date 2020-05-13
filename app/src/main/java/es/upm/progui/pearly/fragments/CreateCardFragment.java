@@ -4,16 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import java.io.FileNotFoundException;
@@ -28,6 +32,7 @@ public class CreateCardFragment extends Fragment {
 
     ImageView newCard;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View createCardView = inflater.inflate(R.layout.fragment_create_card, container, false);
@@ -43,7 +48,7 @@ public class CreateCardFragment extends Fragment {
             }
         });
 
-        Button createButton = createCardView.findViewById(R.id.button_fragmentCreateCard_create);
+        final Button createButton = createCardView.findViewById(R.id.button_fragmentCreateCard_create);
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +56,25 @@ public class CreateCardFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).commit();
             }
         });
+
+        final EditText cardRuleEditText = createCardView.findViewById(R.id.editText_dialogCreateCard_cardRule);
+        cardRuleEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardRuleEditText.setText("Joker card that can be any card. This means that it can act as a “normal” card, which means everything but Skip, Reverse,Draw 2, Draw 4.");
+                createButton.setEnabled(true);
+            }
+        });
+        cardRuleEditText.setShowSoftInputOnFocus(false);
+
+        final EditText cardNameEditText = createCardView.findViewById(R.id.editText_dialogCreateCard_cardName);
+        cardNameEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardNameEditText.setText("Troll Card");
+            }
+        });
+        cardNameEditText.setShowSoftInputOnFocus(false);
 
         return createCardView;
     }
