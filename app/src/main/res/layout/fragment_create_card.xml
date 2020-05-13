@@ -57,7 +57,7 @@
             <Button
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/iconLight"
                 android:layout_marginTop="15dp"
                 android:text="Upload Existing Design"
                 android:textAllCaps="false" />
@@ -66,7 +66,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/iconLight"
                 android:text="Use Previous Design"
                 android:textAllCaps="false" />
 
@@ -83,7 +83,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/iconLight"
                 android:text="Add Image"
                 android:textAllCaps="false" />
 
@@ -91,7 +91,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/iconLight"
                 android:text="Draw Image"
                 android:textAllCaps="false" />
 
@@ -179,19 +179,24 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BACK" />
+            android:text="BACK"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/iconLight"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UNDO" />
+            android:text="UNDO"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/iconLight"/>
 
         <Button
             android:id="@+id/button_fragmentCreateCard_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="CREATE" />
+            android:text="CREATE"
+            android:backgroundTint="@color/iconLight"/>
 
     </LinearLayout>
 </LinearLayout>
