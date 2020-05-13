@@ -24,6 +24,14 @@ public class GameDetailFragment extends Fragment {
         View gameDetailView = inflater.inflate(R.layout.fragment_game_detail, container, false);
 
         Button startGameButton = gameDetailView.findViewById(R.id.button_fragmentGameDetail_startGame);
+//        startGameButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent( getActivity(), GamePlay.class));
+//               // getActivity().getSupportFragmentManager().
+//            }
+//        });
+
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +46,8 @@ public class GameDetailFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).addToBackStack(null).commit();
             }
         });
+
+
 
         return gameDetailView;
     }

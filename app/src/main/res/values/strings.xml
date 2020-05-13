@@ -57,5 +57,9 @@
     <string name="spiderman">Spiderman</string>
     <string name="pr">Princess unicorn</string>
 
+    <string-array name="options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 
 </resources>

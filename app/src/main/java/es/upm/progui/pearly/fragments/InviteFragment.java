@@ -1,5 +1,6 @@
 package es.upm.progui.pearly.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import es.upm.progui.pearly.R;
+import es.upm.progui.pearly.activities.GamePlayActivity;
 
 public class InviteFragment extends Fragment {
 
@@ -34,6 +36,13 @@ public class InviteFragment extends Fragment {
             public void onClick(View v) {
                 friendsInvited.setText("Friends invited: 1");
                 startGameButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        startGameButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent( getActivity(), GamePlayActivity.class));
             }
         });
 
