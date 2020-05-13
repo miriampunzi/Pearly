@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import es.upm.progui.pearly.R;
 import es.upm.progui.pearly.entities.Game;
 import es.upm.progui.pearly.fragments.GameDetailFragment;
+import es.upm.progui.pearly.fragments.GameDetailFragment2;
 
 public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.GameItemViewHolder> {
 
@@ -44,6 +45,14 @@ public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.Game
                 @Override
                 public void onClick(View v) {
                     fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).addToBackStack(null).commit();
+                }
+            });
+        }
+        else if(games.get(position).getImageIdResource() == R.drawable.uno){
+            holder.parentView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment2()).addToBackStack(null).commit();
                 }
             });
         }

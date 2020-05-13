@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -69,6 +70,7 @@ public class NewTestFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).commit();
                         dialog.dismiss();
+                        Toast.makeText(getContext(), "Test created successfully!", Toast.LENGTH_SHORT).show();
                     }
                 });
 

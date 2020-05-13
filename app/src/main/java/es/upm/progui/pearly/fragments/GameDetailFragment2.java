@@ -1,27 +1,26 @@
 package es.upm.progui.pearly.fragments;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import es.upm.progui.pearly.R;
 
-public class GameDetailFragment extends Fragment {
+public class GameDetailFragment2 extends Fragment {
 
-    public static GameDetailFragment newInstance() {
-        return new GameDetailFragment();
+    public static GameDetailFragment2 newInstance() {
+        return new GameDetailFragment2();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View gameDetailView = inflater.inflate(R.layout.fragment_game_detail, container, false);
+        View gameDetailView = inflater.inflate(R.layout.fragment_game_detail2, container, false);
 
         Button startGameButton = gameDetailView.findViewById(R.id.button_fragmentGameDetail_startGame);
 

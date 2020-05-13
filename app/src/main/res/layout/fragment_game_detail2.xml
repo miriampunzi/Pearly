@@ -34,9 +34,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="UNO"
+                android:text="My Uno"
                 android:textColor="@color/textLight"
-                android:textSize="32dp"/>
+                android:textSize="32dp" />
         </LinearLayout>
 
         <LinearLayout
