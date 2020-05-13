@@ -68,7 +68,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:spinnerMode="dropdown"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white">
         </Spinner>
     </LinearLayout>
 
@@ -94,7 +95,8 @@
             android:gravity="center"
             android:id="@+id/spinner_2"
             android:spinnerMode="dropdown"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white">
         </Spinner>
     </LinearLayout>
 
@@ -120,7 +122,8 @@
             android:gravity="center"
             android:id="@+id/spinner_3"
             android:spinnerMode="dropdown"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white">
         </Spinner>
     </LinearLayout>
 
