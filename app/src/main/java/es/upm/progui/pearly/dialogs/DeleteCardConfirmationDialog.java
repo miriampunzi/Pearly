@@ -33,7 +33,7 @@ public class DeleteCardConfirmationDialog extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Database.UNO_CARDS.remove(card);
-                fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).commit();
+                fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).addToBackStack(null).commit();
                 dialog.dismiss();
             }
         });

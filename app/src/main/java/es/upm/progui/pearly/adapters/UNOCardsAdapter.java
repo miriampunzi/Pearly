@@ -43,7 +43,7 @@ public class UNOCardsAdapter extends RecyclerView.Adapter<UNOCardsAdapter.CardIt
             holder.parentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new CreateCardFragment()).commit();
+                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new CreateCardFragment()).addToBackStack(null).commit();
                 }
             });
         }

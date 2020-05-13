@@ -27,7 +27,7 @@ public class GameDetailFragment extends Fragment {
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameSetupFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameSetupFragment()).addToBackStack(null).commit();
             }
         });
 
@@ -35,7 +35,7 @@ public class GameDetailFragment extends Fragment {
         modifyGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new ModificationFragment()).addToBackStack(null).commit();
             }
         });
 

@@ -43,7 +43,7 @@ public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.Game
             holder.parentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).commit();
+                    fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new GameDetailFragment()).addToBackStack(null).commit();
                 }
             });
         }

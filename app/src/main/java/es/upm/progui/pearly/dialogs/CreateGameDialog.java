@@ -37,7 +37,7 @@ public class CreateGameDialog extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Database.GAMES_CREATED.add(new Game(newGameName.getText().toString(), R.drawable.uno));
-                fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new HomeFragment()).commit();
+                fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new HomeFragment()).addToBackStack(null).commit();
                 dialog.dismiss();
             }
         });

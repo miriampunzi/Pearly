@@ -26,7 +26,7 @@ public class GameSetupFragment extends Fragment {
         inviteFromFriendListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new InviteFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new InviteFragment()).addToBackStack(null).commit();
             }
         });
 
